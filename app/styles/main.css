@@ -6,6 +6,16 @@
   box-sizing: border-box;
 }
 
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
 body {
     background: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -22,6 +32,14 @@ h5 {
 .primary h4,
 .primary h5 {
     color: #fff;
+}
+
+.logo {
+    float: left;
+}
+
+.main-nav {
+    float: right;
 }
 
 .content-container {
@@ -70,4 +88,23 @@ h5 {
 
 #kontakt {
     height: 506px;
+}
+
+.site-footer {
+    height: 102px;
+    padding: 0;
+    text-align: left;
+}
+
+.site-footer .container {
+    height: 51px;
+    padding: 0 140px;
+}
+
+.scroll-top {
+    float: right;
+}
+
+.copyright {
+    background: #f8f8f8;
 }
