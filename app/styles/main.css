@@ -42,8 +42,13 @@ h5 {
     float: right;
 }
 
-.content-container {
+.site-container {
     width: 1200px;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 100%;
     padding: 0 140px;
     margin: 0 auto;
     text-align: center;
