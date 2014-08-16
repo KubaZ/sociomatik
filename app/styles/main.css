@@ -1,0 +1,73 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+h3,
+h4,
+h5 {
+    color: #74CED9;
+}
+
+.primary h3,
+.primary h4,
+.primary h5 {
+    color: #fff;
+}
+
+.content-container {
+    width: 1200px;
+    padding: 0 140px;
+    margin: 0 auto;
+    text-align: center;
+    height: auto;
+}
+
+.content-container.primary {
+    background: #1CA4CA;
+}
+
+.content-container.secondary {
+    background: #fff;
+}
+
+.content-container.secondary-grey {
+    background: #F8F8F8;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.content-container.first {
+    height: 372px;
+}
+
+.content-container.second {
+    height: 630px;
+}
+
+#dlaczego-sociomatik {
+    height: 606px;
+}
+
+#poznaj-mozliwosci {
+    height: 812px;
+}
+
+#pakiety {
+    height: 1035px;
+}
+
+#kontakt {
+    height: 506px;
+}
