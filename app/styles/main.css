@@ -108,3 +108,9 @@ h5 {
 .copyright {
     background: #f8f8f8;
 }
+
+.even-width {
+  width: 280px;
+  float: left;
+  margin-right: 20px;
+}
