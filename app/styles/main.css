@@ -16,10 +16,15 @@
     clear: both;
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body {
     background: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+    font-size: 16px;
 }
 
 h3,
@@ -28,10 +33,12 @@ h5 {
     color: #74CED9;
 }
 
-.primary h3,
-.primary h4,
-.primary h5 {
-    color: #fff;
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .logo {
@@ -55,8 +62,16 @@ h5 {
     height: auto;
 }
 
-.content-container.primary {
+.content-container a {
+    color: inherit;
+}
+
+.content-container.primary,
+.content-container.primary h3,
+.content-container.primary h4,
+.content-container.primary h5 {
     background: #1CA4CA;
+    color: #fff;
 }
 
 .content-container.secondary {
