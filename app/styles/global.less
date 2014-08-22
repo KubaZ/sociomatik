@@ -28,6 +28,13 @@ body {
     font-size: 16px;
 }
 
+h3,
+h4,
+h5 {
+    color: #00abbd;
+    font-weight: 300;
+}
+
 h3 {
     font-size: 45px;
     line-height: 48px;
@@ -38,15 +45,9 @@ h4 {
 }
 
 h5 {
-    font-size: 26px;
+    font-size: 22px;
     margin: 10px 0;
-}
-
-h3,
-h4,
-h5 {
-    color: #00abbd;
-    font-weight: 300;
+    font-weight: 700;
 }
 
 p {
@@ -64,5 +65,43 @@ a {
 
     &:hover {
         text-decoration: underline;
+    }
+}
+
+.logo {
+    float: left;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid #918f8f;
+    border-radius: 4px;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.btn-primary {
+        height: 37px;
+        line-height: 35px;
+        font-weight: 700;
+        padding: 0 30px;
+        color: #00abbd;
+        background: #fff;
+    }
+
+    &.btn-secondary {
+        line-height: 24px;
+        height: 26px;
+        padding: 0 12px;
+        margin-left: 10px;
+    }
+
+    &.btn-submit {
+        background: #a6a6a6;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        box-shadow: -1px 1px 3px 1px #C8C8C8;
     }
 }
