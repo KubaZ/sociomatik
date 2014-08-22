@@ -116,26 +116,75 @@
 #pakiety {
     height: 1035px;
 
+    > h4 {
+        color: #a6a6a6;
+        margin: -20px 0 20px;
+    }
+
+    .form {
+        margin-bottom: 20px;
+    }
+
+    .subscriptions-container {
+        text-align: justify;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 100%;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+
     .subscription {
-        width: 256px;
+        width: 260px;
         display: inline-block;
         vertical-align: top;
+        position: relative;
+        text-align: center;
 
         .text-container {
             background: #f7f7f7;
-            padding: 25px;
+            padding: 25px 15px;
             border-radius: 8px;
+
+            .img-container {
+                height: 112px;
+            }
 
             p {
                 font-size: 15px;
+            }
+
+            .extensions {
+                margin-top: 40px;
+
+                p {
+                    font-size: 18px;
+                }
+
+                .didascalia {
+                    font-size: 11px;
+                }
             }
         }
 
         &.extensions {
             background: #e9f7f9;
-            margin-top: 6px;
+            margin-top: 8px;
             border-radius: 8px;
+            padding: 0 0 8px;
         }
+    }
+
+    .payments {
+        margin-top: 50px;
     }
 }
 
