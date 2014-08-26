@@ -15,4 +15,5 @@
     }
 
     emailElement.addEventListener('change', updateSubmitButton, false);
+    updateSubmitButton();
 })();
