@@ -45,7 +45,8 @@ gulp.task('images', function () {
         .pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,
-            interlaced: true
+            interlaced: true,
+            pngquant: true
         })))
         .pipe(gulp.dest('dist/images'))
         .pipe($.size());
