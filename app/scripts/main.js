@@ -4,7 +4,7 @@
     function subscription () {
         var emailElement = document.querySelector('#trial-email');
         var submitButton = document.querySelector('#pakiety .btn-submit');
-        var emailSubject = encodeURIComponent(document.querySelector('#pakiety > h3').innerText);
+        var emailSubject = encodeURIComponent(document.querySelector('#pakiety > h3').innerHTML);
         var submitButtonInitialValue = submitButton.getAttribute('href');
 
         function updateSubmitButton () {
@@ -47,7 +47,7 @@
             if (img.getAttribute('data-original')) {
                 img.setAttribute('src', img.getAttribute('data-original'));
             }
-            counter.innerText = currentItem + 1 + '/' + carouselItems.length;
+            counter.innerHTML = currentItem + 1 + '/' + carouselItems.length;
         }
 
         function moveBackward (e) {
