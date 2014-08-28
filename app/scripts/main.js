@@ -30,6 +30,7 @@
         var scrollEnd;
 
         function animateCarousel () {
+            stopAnimation();
             animationInterval = setInterval(moveForward, 3000);
         }
 
