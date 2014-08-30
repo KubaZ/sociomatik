@@ -147,6 +147,10 @@ a {
             right: 0;
             background-position: 100% 0;
         }
+
+        .counter {
+
+        }
     }
 
     .carousel {
@@ -182,10 +186,16 @@ a {
             }
 
             &.active {
+                position: relative;
                 display: block;
                 z-index: 3;
                 opacity: 1;
+                top: 0;
             }
         }
     }
+}
+
+.mobile {
+    display: none;
 }

@@ -52,10 +52,13 @@
             padding-top: 0;
             z-index: 2;
 
-            .ekran {
+            .screen-graphic {
                 position: relative;
+                background: url(../images/ekran.png) no-repeat 0 0 transparent;
                 bottom: -70px;
                 float: left;
+                width: 551px;
+                height: 377px;
             }
 
             article {
@@ -157,6 +160,15 @@
             font-size: 15px;
         }
     }
+
+    .background-overlay {
+        width: 1108px;
+        height: 342px;
+        position: absolute;
+        bottom: -28px;
+        left: 40px;
+        background: url(../images/ipady.png) no-repeat 0 0 transparent;
+    }
 }
 
 #poznaj-mozliwosci {
@@ -179,8 +191,10 @@
     }
 }
 
-#pakiety .container {
-    height: 1110px;
+#pakiety {
+    .container:last-child {
+        padding-top: 0;
+    }
 
     > h4 {
         color: #a6a6a6;
@@ -236,8 +250,18 @@
         }
     }
 
+    .justify-elements {
+        > .subscription {
+            &:last-child {
+                .text-container {
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+
     .payments {
-        margin-top: 40px;
+        margin: 40px 0;
     }
 }
 

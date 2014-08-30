@@ -1,4 +1,12 @@
 @media screen and (max-width: 600px) {
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
     img {
         width: auto;
         height: auto;
@@ -11,12 +19,64 @@
         font-weight: 700;
     }
 
+    p {
+        font-size: 15px;
+    }
+
     .content-container {
         .container {
             width: 320px;
             padding: 0 20px;
             height: auto;
             overflow: hidden;
+
+            &.container-fluid {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        &.first {
+            .container {
+                height: auto;
+
+                h3 {
+                    margin: 22px -5px 22px 0;
+                }
+
+                article {
+                    float: none;
+                    display: block;
+                    padding: 0;
+                    width: 100%;
+
+                    p {
+                        width: 260px;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+
+        &.first,
+        &.second {
+            h3 {
+                font-size: 25px;
+                line-height: 28px;
+                font-weight: 200;
+            }
+        }
+
+        &.second {
+            .container {
+                article {
+                    margin-top: 0;
+
+                    h3 {
+                        width: 150px;
+                    }
+                }
+            }
         }
     }
 
@@ -29,10 +89,18 @@
         height: auto;
         z-index: 2;
 
+        h5 {
+            font-size: 30px;
+        }
+
         .overflow-bottom {
             left: 40px;
             position: absolute;
             bottom: -28px;
+        }
+
+        .justify-elements {
+            position: relative;
         }
 
         .even-width {
@@ -40,6 +108,18 @@
             display: block;
             margin: 0 0 135px;
             text-align: center;
+
+            &:last-child {
+                margin-bottom: 335px;
+            }
+        }
+
+        .background-overlay {
+            width: 320px;
+            height: 100%;
+            background: url(../images/ipady-mobile.png) no-repeat center 255px transparent;
+            bottom: auto;
+            left: 0;
         }
     }
 
@@ -49,16 +129,13 @@
         .justify-elements {
             > .subscription {
                 display: block;
-                width: 320px;
+                width: 100%;
                 margin: 0 -20px;
                 background: #f7f7f7;
+                margin: 0;
 
-                &.extension {
+                .extension {
                     margin: 0;
-                }
-
-                .text-container {
-                    border-radius: 0;
                 }
             }
         }
@@ -67,27 +144,37 @@
             &.extensions {
                 margin: 0;
                 display: block;
-                width: 320px;
+                width: 100%;
                 margin: 0;
                 border-radius: 0;
             }
 
             h4 {
-                margin: 0 10px;
-                padding-top: 10px;
+                margin: 0;
+                padding: 10px 0;
+            }
+
+            .text-container {
+                border-radius: 0;
+                width: 320px;
+                padding: 0 30px;
+                display: block;
+                margin: 0 auto;
             }
         }
 
         .payments {
-            margin: 10px 0;
+            margin: 5px 0 20px;
         }
     }
 
     #klienci .container {
+        width: 100%;
+        padding: 0;
+
         .img-container {
             width: 100%;
-            height: 100px;
-            margin-bottom: 10px;
+            height: 122px;
             float: none;
             display: block;
 
@@ -99,8 +186,26 @@
             }
         }
 
+        .row {
+            &:nth-child(2n+1) {
+                .img-container {
+                    &:nth-child(2) {
+                        background: #fff;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                .img-container {
+                    &:nth-child(2n+1) {
+                        background: #fff;
+                    }
+                }
+            }
+        }
+
         .clients {
-            padding-bottom: 10px;
+            padding-bottom: 0;
         }
     }
 
@@ -123,10 +228,6 @@
     }
 
     .content-container.site-footer {
-        &.extra-links {
-            display: none;
-        }
-
         .container {
             padding: 0 20px;
 

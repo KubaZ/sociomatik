@@ -5,7 +5,7 @@
         <title>Sociomatik - Proste zarządzanie social media</title>
         <meta name="description" content="Sociomatik - Proste zarządzanie social media">
         <meta name="keywords" content="zarządzanie, social, media">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="favicon.png">
         <link href='http://fonts.googleapis.com/css?family=Exo+2:400,200,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- build:css styles/main.css -->
@@ -37,42 +37,42 @@
             </header>
             <section class="content-container primary align-left first">
                 <div class="container clearfix">
-                    <img src="images/ekran.png" alt="Sociomatik, proste zarządzanie social media" class="ekran" width="551" height="377">
+                    <div class="screen-graphic desktop"></div>
                     <article>
-                        <h3>Sociomatik <br>proste zarządzanie social media</h3>
+                        <h3>Sociomatik <br class="desktop">proste zarządzanie social media</h3>
                         <p>Twoje profile w jednym, wygodnym interfejsie, dzięki czemu zarządzasz nimi o 50% efektywniej.</p>
-                        <a href="#" class="btn btn-primary">Wypróbuj wersję darmową</a>
+                        <a href="#" class="btn btn-primary desktop">Wypróbuj wersję darmową</a>
                     </article>
                 </div>
             </section>
             <section class="content-container secondary align-left second">
                 <div class="container clearfix">
                     <article>
-                        <h3>Z Sociomatik posty wrzucają się same.</h3>
+                        <h3>Z Sociomatik posty wrzucają <br class="mobile">się same.</h3>
                         <p>Twoje social media integrują się z Twoimi kanałami obsługi takimi jak <i class="icon icon-helpdesk"></i> helpdesk, dzięki czemu błyskawicznie reagujesz</p>
                         <p class="special">To najlepsze udogodnienie dla osób zarządzających Social Media od czasu wynalezienia automatycznej skrzyni biegów.</p>
-                        <a href="#" class="btn btn-primary">jak to działa?</a>
+                        <a href="#" class="btn btn-primary desktop">jak to działa?</a>
                     </article>
                 </div>
             </section>
             <section class="content-container secondary-grey" id="dlaczego-sociomatik">
                 <div class="container clearfix">
+                    <div class="background-overlay"></div>
                     <h3>Dlaczego Sociomatik?</h3>
                     <section class="justify-elements">
                         <article class="even-width">
-                            <h5>Wszystko w jednym miejscu</h5>
-                            <p>konkursy i statystki wewnątrz aplikacji.</p>
+                            <h5>Wszystko w<br class="mobile"> jednym miejscu</h5>
+                            <p>konkursy i statystki wewnątrz<br class="mobile"> aplikacji.</p>
                         </article>
                         <article class="even-width">
-                            <h5>Efektywna współpraca i social helpdesk</h5>
+                            <h5>Efektywna <br class="mobile">współpraca<br class="mobile"> i social helpdesk</h5>
                             <p>możliwość współpracy z innymi członkami zespołu, innymi zespołami i klientami.</p>
                         </article>
                         <article class="even-width">
-                            <h5>Wygodna i szbka praca</h5>
+                            <h5>Wygodna<br class="mobile"> i szbka praca</h5>
                             <p>niezależnie od liczby obsługiwanych profili sieci społecznościowych i ich rodzajów (Facebook, twitter, Linkedin) dzięki INBOXOWI, szablonom i kalendarzowi</p>
                         </article>
                     </section>
-                    <img src="images/ipady.png" alt="Dlaczego sociomatik?" class="overflow-bottom" width="1108" height="342">
                 </div>
             </section>
             <section class="content-container primary" id="poznaj-mozliwosci">
@@ -121,6 +121,8 @@
                         <input type="email" placeholder="adres e-mail" id="trial-email" required>
                         <a href="mailto:office@sociomatik.com" class="btn btn-submit">zacznij teraz</a>
                     </form>
+                </div>
+                <div class="container container-fluid clearfix">
                     <section class="justify-elements">
                         <article class="even-width subscription">
                             <h4>Basic</h4>
@@ -169,7 +171,7 @@
                                 <p>Nieograniczona liczba użytkowników</p>
                                 <p>Nieograniczona liczba połączonych profili i kont społecznościowych</p>
                                 <p>Inbox, Kalendarz, Statystyki</p>
-                                <div class="extensions">
+                                <div class="extensions clearfix">
                                     <h4>Rozszerzenia</h4>
                                     <p>Konkursy<br>Social helpdesk</p>
                                     <p class="didascalia">W cenie pakietu</p>
@@ -191,7 +193,8 @@
                                 <img src="images/logos/noodle.png" alt="Noodle w pudle" width="163" height="78">
                             </div>
                             <div class="img-container">
-                                <img src="images/logos/green.png" alt="GreenLevel agencja interaktywna" width="191" height="97">
+                                <img src="images/logos/green.png" alt="GreenLevel agencja interaktywna" width="191" height="97" class="desktop">
+                                <img src="images/logos/green-mobile.png" alt="GreenLevel agencja interaktywna" width="191" height="97" class="mobile">
                             </div>
                             <div class="img-container">
                                 <img src="images/logos/wsieci.png" alt="W sieci sieci" width="152" height="78">
@@ -199,13 +202,15 @@
                         </div>
                         <div class="row clearfix">
                             <div class="img-container">
-                                <img src="images/logos/panska.png" alt="Pańska skórka" width="167" height="99">
+                                <img src="images/logos/panska.png" alt="Pańska skórka" width="167" height="99" class="desktop">
+                                <img src="images/logos/panska-mobile.png" alt="Pańska skórka" width="167" height="99" class="mobile">
                             </div>
                             <div class="img-container">
                                 <img src="images/logos/mally.png" alt="Mally - asystent zakupów" width="199" height="84">
                             </div>
                             <div class="img-container">
-                                <img src="images/logos/social.png" alt="social art" width="72" height="124">
+                                <img src="images/logos/social.png" alt="social art" width="72" height="124" class="desktop">
+                                <img src="images/logos/social-mobile.png" alt="social art" width="72" height="124" class="mobile">
                             </div>
                         </div>
                         <div class="row clearfix">
@@ -247,7 +252,7 @@
                     </footer>
                 </div>
             </section>
-            <section class="content-container extra-links primary site-footer">
+            <section class="content-container extra-links primary site-footer desktop">
                 <div class="container clearfix">
                     <nav class="footer-links">
                         <a href="static-files/regulamin-sociomatik.pdf" target="_blank">regulamin</a>
