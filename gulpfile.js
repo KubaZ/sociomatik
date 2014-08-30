@@ -10,7 +10,7 @@ gulp.task('styles', function () {
     var less = require('gulp-less');
     return gulp.src('app/styles/main.less')
         .pipe(less({compress: false}))
-        .pipe($.autoprefixer('last 1 version'))
+        .pipe($.autoprefixer('last 3 version'))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });

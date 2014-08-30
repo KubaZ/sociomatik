@@ -115,6 +115,7 @@ a {
 .carousel-container {
     margin: 0 -134px;
     padding-bottom: 40px;
+    height: 680px;
     background: url(../images/karuzela/cien.png) no-repeat center bottom transparent;
 
     .navigation {
@@ -158,6 +159,8 @@ a {
 
         li {
             position: absolute;
+            display: block;
+            backface-visibility: hidden;
             left: 0;
             right: 0;
             top: 20px;
@@ -180,8 +183,6 @@ a {
 
             &.active {
                 display: block;
-                position: relative;
-                top: 0;
                 z-index: 3;
                 opacity: 1;
             }
