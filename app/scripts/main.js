@@ -4,7 +4,7 @@
     function subscription () {
         var emailElement = document.querySelector('#trial-email');
         var submitButton = document.querySelector('#pakiety .btn-submit');
-        var emailSubject = encodeURIComponent(document.querySelector('#pakiety > h3').innerHTML);
+        var emailSubject = encodeURIComponent(document.querySelector('#pakiety .container > h3').innerHTML);
         var submitButtonInitialValue = submitButton.getAttribute('href');
 
         function updateSubmitButton () {
