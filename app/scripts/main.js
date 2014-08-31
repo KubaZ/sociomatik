@@ -23,7 +23,7 @@
         var container = document.querySelector('.carousel-container');
         var previous = container.querySelector('.navigation .prev');
         var next = container.querySelector('.navigation .next');
-        var carouselItems = container.querySelectorAll('li');
+        var carouselItems;
         var counter = container.querySelector('.counter');
         var currentItem = 0;
         var animationInterval;
@@ -93,7 +93,7 @@
             }, 100);
         }
 
-        function attachHandlers () {
+        function attachDesktopHandlers () {
             previous.addEventListener('click', moveBackward, false);
             next.addEventListener('click', moveForward, false);
             container.addEventListener('mouseover', stopAnimation, false);
@@ -101,7 +101,20 @@
             window.addEventListener('scroll', isInViewPort, false);
         }
 
-        attachHandlers();
+        function attachMobileHandlers () {
+            previous.addEventListener('touchend', moveBackward, false);
+            next.addEventListener('touchend', moveForward, false);
+        }
+
+        if (window.matchMedia('(min-width: 601px)').matches) {
+            carouselItems = container.querySelectorAll('.desktop li');
+            attachDesktopHandlers();
+            setCurrentItem();
+            return;
+        }
+
+        carouselItems = container.querySelectorAll('.mobile li');
+        attachMobileHandlers();
     }
 
     subscription();

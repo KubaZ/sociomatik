@@ -73,6 +73,10 @@ a {
 
 .logo {
     float: left;
+
+    a {
+        display: block;
+    }
 }
 
 .btn {
@@ -109,6 +113,26 @@ a {
         font-weight: 200;
         border: none;
         box-shadow: -1px 1px 3px 1px #C8C8C8;
+    }
+
+    &.btn-navigation {
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 0;
+        border: none;
+        padding: 9px 5px 0;
+        position: relative;
+        float: right;
+        right: 0;
+        top: 8px;
+
+        .icon-bar {
+            display: block;
+            height: 4px;
+            background: #8f8f8f;
+            margin-bottom: 4px;
+        }
     }
 }
 
@@ -197,5 +221,5 @@ a {
 }
 
 .mobile {
-    display: none;
+    display: none !important;
 }

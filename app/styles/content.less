@@ -87,6 +87,7 @@
         z-index: 1;
 
         h3 {
+            width: 400px;
             margin-bottom: 80px;
         }
 
@@ -192,15 +193,17 @@
 }
 
 #pakiety {
-    .container:last-child {
-        padding-top: 0;
-    }
+    .container {
+        &:last-child {
+            padding-top: 0;
+        }
 
-    > h4 {
-        color: #a6a6a6;
-        margin: -20px 0 20px;
+        > h4 {
+            color: #a6a6a6;
+            margin: -20px 0 20px;
+        }
     }
-
+    
     .form {
         margin-bottom: 40px;
     }

@@ -1,10 +1,15 @@
 @media screen and (max-width: 600px) {
+    html,
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+
     .mobile {
-        display: block;
+        display: block !important;
     }
 
     .desktop {
-        display: none;
+        display: none !important;
     }
 
     img {
@@ -14,13 +19,40 @@
     }
 
     h3 {
-        font-size: 34px;
+        font-size: 35px;
         line-height: 36px;
-        font-weight: 700;
+        font-weight: 200;
+        margin: 20px 0;
     }
 
     p {
         font-size: 15px;
+    }
+
+    .site-header {
+        .container {
+            nav {
+                display: none;
+            }
+        }
+    }
+
+    .logo {
+        margin: 10px 0;
+
+        a {
+            overflow: hidden;
+            width: 185px;
+            height: 55px;
+            position: relative;
+
+            img {
+                position: absolute;
+                left: -45px;
+                top: -50px;
+                max-width: none;
+            }
+        }
     }
 
     .content-container {
@@ -69,25 +101,42 @@
 
         &.second {
             .container {
+                background: url('../images/skrzynia-mobile.png') no-repeat 0 0 #fff;
+                background-size: clip;
+                height: auto;
+
+                h3 {
+                    width: 150px;
+                    margin: 30px 0 100px;
+                }
+
                 article {
                     margin-top: 0;
+                    padding: 20px 0 15px;
+                    width: 100%;
 
-                    h3 {
-                        width: 150px;
+                    p {
+                        width: auto;
+                        margin: 0 0 12px;
                     }
                 }
             }
         }
     }
 
-    .carousel-container {
-        margin: 0;
-        height: auto;
+    #poznaj-mozliwosci {
+        .container {
+            height: 460px;
+
+            h3 {
+                margin: 20px -10px;
+            }
+        }
     }
 
     #dlaczego-sociomatik .container {
         height: auto;
-        z-index: 2;
+        margin-bottom: -40px;
 
         h5 {
             font-size: 30px;
@@ -117,7 +166,7 @@
         .background-overlay {
             width: 320px;
             height: 100%;
-            background: url(../images/ipady-mobile.png) no-repeat center 255px transparent;
+            background: url(../images/ipady-mobile.png) no-repeat center 225px transparent;
             bottom: auto;
             left: 0;
         }
@@ -126,11 +175,14 @@
     #pakiety .container {
         height: auto;
 
+        > h4 {
+            font-size: 24px;
+        }
+
         .justify-elements {
             > .subscription {
                 display: block;
                 width: 100%;
-                margin: 0 -20px;
                 background: #f7f7f7;
                 margin: 0;
 
@@ -160,6 +212,10 @@
                 padding: 0 30px;
                 display: block;
                 margin: 0 auto;
+
+                .extensions {
+                    margin-top: 20px;
+                }
             }
         }
 
@@ -218,6 +274,14 @@
             margin: 35px 0;
         }
 
+        p {
+            &,
+            span,
+            a {
+                font-weight: 300;
+            }
+        }
+
         .social-media nav {
             margin: 35px 0;
         }
@@ -225,15 +289,28 @@
 
     #trial-email {
         width: 100%;
+        font-size: 16px;
     }
 
     .content-container.site-footer {
         .container {
             padding: 0 20px;
+            font-size: 9px;
 
             .center {
                 display: none;
             }
+        }
+    }
+
+    .carousel-container {
+        margin: 0;
+        height: auto;
+        background: transparent;
+
+        .navigation {
+            top: auto;
+            bottom: 20px;
         }
     }
 }
