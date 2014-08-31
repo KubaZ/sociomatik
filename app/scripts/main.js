@@ -41,9 +41,11 @@
         var next = container.querySelector('.navigation .next');
         var carouselItems;
         var counter = container.querySelector('.counter');
+        var paginationDots = container.querySelectorAll('.pagination li');
         var currentItem = 0;
         var animationInterval;
         var scrollEnd;
+        var isMobile = false;
 
         function animateCarousel () {
             stopAnimation();
@@ -56,15 +58,34 @@
 
         function disableCurrentItem () {
             carouselItems[currentItem].classList.remove('active');
+            if (isMobile) {
+                paginationDots[currentItem].classList.remove('active');
+            }
         }
 
         function setCurrentItem () {
             carouselItems[currentItem].classList.add('active');
             var img = carouselItems[currentItem].querySelector('img');
-            if (img.getAttribute('data-original')) {
+            if (img && img.getAttribute('data-original')) {
                 img.setAttribute('src', img.getAttribute('data-original'));
             }
+            if (isMobile) {
+                paginationDots[currentItem].classList.add('active');
+            }
             counter.innerHTML = currentItem + 1 + '/' + carouselItems.length;
+        }
+
+        function paginationHandler (e) {
+            e.preventDefault();
+            disableCurrentItem();
+
+            for (var i = 0; i < paginationDots.length; i++){
+                if (paginationDots[i] === this) {
+                    currentItem = i;
+                    setCurrentItem();
+                    return;
+                }
+            }
         }
 
         function moveBackward (e) {
@@ -120,6 +141,9 @@
         function attachMobileHandlers () {
             previous.addEventListener('click', moveBackward, false);
             next.addEventListener('click', moveForward, false);
+            for (var i = 0; i < paginationDots.length; i++) {
+                paginationDots[i].addEventListener('click', paginationHandler, false);
+            }
         }
 
         if (window.matchMedia('(min-width: 601px)').matches) {
@@ -129,7 +153,8 @@
             return;
         }
 
-        carouselItems = container.querySelectorAll('.mobile li');
+        isMobile = true;
+        carouselItems = container.querySelectorAll('.carousel.mobile li');
         attachMobileHandlers();
     }
 
