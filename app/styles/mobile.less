@@ -30,9 +30,57 @@
     }
 
     .site-header {
+        overflow: visible;
+        height: 75px;
+
         .container {
+            z-index: 6;
+            background: #fff;
+        }
+
+        .navigation-container {
+            @navigation-height: 272px;
+
+            left: 0;
+            top: -@navigation-height;
+            width: 320px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 5;
+            background: #fff;
+            height: @navigation-height;
+            transition: transform 0.3s ease-in-out;
+
             nav {
-                display: none;
+                float: none;
+                margin: 0;
+                display: block;
+                position: relative;
+                top: auto;
+                right: auto;
+                text-align: left;
+
+                a {
+                    display: block;
+                    border: none;
+                    border-bottom: 1px solid #a8a8a8;
+                    border-radius: 0;
+                    padding: 10px;
+                    margin: 0;
+                    font-size: 15px;
+                    line-height: 18px;
+                    height: auto;
+                }
+            }
+
+            .user-nav {
+                a:last-child {
+                    border: none;
+                }
+            }
+
+            &.open {
+                transform: translateY(@navigation-height);
             }
         }
     }
@@ -177,6 +225,7 @@
 
         > h4 {
             font-size: 24px;
+            margin: 0 0 24px;
         }
 
         .justify-elements {
