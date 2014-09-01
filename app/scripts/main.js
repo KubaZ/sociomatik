@@ -35,7 +35,7 @@
         updateSubmitButton();
     }
 
-    function carousel () {
+    function carousel (options) {
         var container = document.querySelector('.carousel-container');
         var previous = container.querySelector('.navigation .prev');
         var next = container.querySelector('.navigation .next');
@@ -45,7 +45,7 @@
         var currentItem = 0;
         var animationInterval;
         var scrollEnd;
-        var isMobile = false;
+        var isMobile = options.isMobile;
 
         function animateCarousel () {
             stopAnimation();
@@ -71,6 +71,7 @@
             }
             if (isMobile) {
                 paginationDots[currentItem].classList.add('active');
+                return;
             }
             counter.innerHTML = currentItem + 1 + '/' + carouselItems.length;
         }
@@ -146,19 +147,20 @@
             }
         }
 
-        if (window.matchMedia('(min-width: 601px)').matches) {
+        if (!isMobile) {
             carouselItems = container.querySelectorAll('.desktop li');
             attachDesktopHandlers();
             setCurrentItem();
             return;
         }
 
-        isMobile = true;
         carouselItems = container.querySelectorAll('.carousel.mobile li');
         attachMobileHandlers();
     }
 
     subscription();
-    carousel();
     mobileNavigation();
+
+    var desktopCarousel = new carousel({isMobile: false});
+    var mobileCarousel = new carousel({isMobile: true});
 })();
