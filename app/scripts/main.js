@@ -35,7 +35,7 @@
         updateSubmitButton();
     }
 
-    function carousel (options) {
+    function Carousel (options) {
         var container = document.querySelector('.carousel-container');
         var previous = container.querySelector('.navigation .prev');
         var next = container.querySelector('.navigation .next');
@@ -161,6 +161,6 @@
     subscription();
     mobileNavigation();
 
-    var desktopCarousel = new carousel({isMobile: false});
-    var mobileCarousel = new carousel({isMobile: true});
+    new Carousel({isMobile: false});
+    new Carousel({isMobile: true});
 })();
