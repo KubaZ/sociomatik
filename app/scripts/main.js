@@ -17,24 +17,6 @@
         window.addEventListener('hashchange', toggleVisibility, false);
     }
 
-    function subscription () {
-        var emailElement = document.querySelector('#trial-email');
-        var submitButton = document.querySelector('#pakiety .btn-submit');
-        var emailSubject = encodeURIComponent(document.querySelector('#pakiety .container > h3').innerHTML);
-        var submitButtonInitialValue = submitButton.getAttribute('href');
-
-        function updateSubmitButton () {
-            var email = encodeURIComponent('Email: ' + emailElement.value);
-            submitButton.setAttribute(
-                'href',
-                submitButtonInitialValue + '?subject=' + emailSubject + '&body=' + email
-            );
-        }
-
-        emailElement.addEventListener('change', updateSubmitButton, false);
-        updateSubmitButton();
-    }
-
     function Carousel (options) {
         var container = document.querySelector('.carousel-container');
         var previous = container.querySelector('.navigation .prev');
@@ -158,7 +140,6 @@
         attachMobileHandlers();
     }
 
-    subscription();
     mobileNavigation();
 
     new Carousel({isMobile: false});

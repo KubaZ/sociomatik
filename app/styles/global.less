@@ -106,11 +106,17 @@ a {
         margin-left: 10px;
     }
 
-    &.btn-submit {
-        background: #a6a6a6;
+    &.inversed {
+        background: #00abbd;
         color: #fff;
-        padding: 10px;
+    }
+
+    &.trial {
+        margin: -10px 0 20px;
         font-weight: 200;
+        font-size: 20px;
+        height: 44px;
+        line-height: 40px;
         border: none;
         box-shadow: -1px 1px 3px 1px #C8C8C8;
     }
@@ -149,7 +155,7 @@ a {
         right: 0;
         margin: 0 auto;
         height: 30px;
-        margin-top: 30px;
+        margin-top: 5px;
         font-size: 13px;
         font-weight: 300;
         position: absolute;
@@ -191,7 +197,7 @@ a {
             backface-visibility: hidden;
             left: 0;
             right: 0;
-            top: 20px;
+            top: -30px;
             margin: auto;
             width: 100%;
             z-index: 2;
@@ -204,9 +210,9 @@ a {
             }
 
             p {
-                margin-top: -20px;
-                margin-bottom: 40px;
-                font-size: 13px;
+                margin-top: 0;
+                margin-bottom: 50px;
+                font-size: 18px;
             }
 
             &.active {
@@ -214,7 +220,6 @@ a {
                 display: block;
                 z-index: 3;
                 opacity: 1;
-                top: 0;
             }
 
             h6 {
