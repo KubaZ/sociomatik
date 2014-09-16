@@ -87,16 +87,24 @@
         z-index: 1;
 
         h3 {
-            width: 400px;
-            margin: 60px 0 80px;
+            width: 412px;
+            margin: 80px 0 0;
+            font-size: 48px;
+            font-weight: 300;
         }
 
         article {
             width: 400px;
-            margin-top: 120px;
+            margin-top: 78px;
 
             p {
                 width: 340px;
+                font-size: 17px;
+
+                &.special {
+                    font-size: 16px;
+                    font-weight: 500;
+                }
             }
 
             .btn {
@@ -104,6 +112,7 @@
                 font-weight: 400;
                 padding: 0 26px;
                 box-shadow: 0 4px 6px -1px #c5c5c5;
+                margin: 20px 0 0;
             }
 
             .icon {
@@ -219,6 +228,10 @@
             font-weight: 400;
         }
 
+        p {
+            font-weight: 500;
+        }
+
         .text-container {
             background: #f7f7f7;
             padding: 25px 15px 10px;
@@ -235,10 +248,6 @@
             .extensions {
                 margin: -3px 0 19px;
 
-                p {
-                    font-size: 18px;
-                }
-
                 .didascalia {
                     font-size: 11px;
                 }
@@ -249,8 +258,17 @@
             background: #e9f7f9;
             margin-top: 8px;
             border-radius: 8px;
-            padding: 0 0 8px;
+            padding: 0 0 24px;
             height: auto;
+
+            p {
+                font-size: 15px;
+            }
+
+            .didascalia {
+                font-size: 11px;
+                line-height: 13px;
+            }
         }
     }
 
